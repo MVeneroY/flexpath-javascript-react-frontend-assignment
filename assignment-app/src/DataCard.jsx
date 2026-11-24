@@ -14,10 +14,8 @@ export default function DataCart({ stats, type }) {
 
   return (
     <div className="card">
-      <div className="card-body card-text text-center  pb-0">
-        <h5>
-          <b>{type}</b>
-        </h5>
+      <div className="card-body card-text text-center pb-0">
+        <h5 className="fw-bold">{type}</h5>
         {Object.keys(stat).map((key) => (
           <p key={key}>
             {key} - {stat[key]} {unitsMap[type]}

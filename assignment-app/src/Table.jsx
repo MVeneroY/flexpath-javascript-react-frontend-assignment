@@ -31,7 +31,6 @@ export default function Table({ data }) {
         </tr>
       </thead>
       <tbody>{data && data.map(renderRow)}</tbody>
-      {/* {console.log(stats)} */}
     </table>
   );
 }
