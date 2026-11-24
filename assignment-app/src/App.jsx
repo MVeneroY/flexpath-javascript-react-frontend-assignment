@@ -1,14 +1,23 @@
+// eslint-disable-next-line
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+import NavBar from "./NavBar";
+import Home from "./Home";
+import Search from "./Search";
+import PageNotFound from "./PageNotFound";
 
 function App() {
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        {/* <p> tag is a placeholder, You'll need to change the tag/component type later*/}
-        <p className="navbar-brand ms-4 nav-link">User Behavior Data</p>
-      </nav>
-      <hr />
-    </div>
+    <>
+      <NavBar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="search" element={<Search />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </main>
+    </>
   );
 }
 
